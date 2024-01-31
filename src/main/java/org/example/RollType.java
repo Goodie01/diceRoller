@@ -5,9 +5,9 @@ import java.util.function.BiFunction;
 import java.util.function.IntSupplier;
 
 public enum RollType {
-    NORMAL("normal roll", IntSupplier::getAsInt),
-    ADVANTAGE("with Advantage", rollSupplier -> Math.max(rollSupplier.getAsInt(), rollSupplier.getAsInt())),
-    DISADVANTAGE("with disadvantage", rollSupplier -> Math.min(rollSupplier.getAsInt(), rollSupplier.getAsInt()));
+    NORMAL("", IntSupplier::getAsInt),
+    ADVANTAGE(" (with Advantage)", rollSupplier -> Math.max(rollSupplier.getAsInt(), rollSupplier.getAsInt())),
+    DISADVANTAGE(" (with Disadvantage)", rollSupplier -> Math.min(rollSupplier.getAsInt(), rollSupplier.getAsInt()));
 
     private final String description;
     private final Roller roller;

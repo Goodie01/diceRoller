@@ -63,11 +63,6 @@ public class DiceRollImpl implements DiceRoll{
     @Override
     public String toString() {
         RollType calculatedRollType = getRollType();
-
-        if(calculatedRollType == RollType.NORMAL) {
-            return baseAmount + "+" + diceRolls + "D" + diceSize;
-        } else {
-            return baseAmount + "+" + diceRolls + "D" + diceSize + " (" + calculatedRollType.getDescription() + ")";
-        }
+        return baseAmount + "+" + diceRolls + "D" + diceSize + calculatedRollType.getDescription();
     }
 }
