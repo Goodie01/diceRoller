@@ -9,7 +9,10 @@ public class Main {
         DiceRoll diceRoll = DiceRoll.start()
                 .withDiceRolls(3)
                 .withDiceSize(6)
-                .withBaseAmount(6);
+                .withBaseAmount(6)
+                .withAdvantage();
+
+        System.out.println(diceRoll);
 
         for (int i = 0; i < 1000; i++) {
             System.out.println(diceRoll.result(random).get());
